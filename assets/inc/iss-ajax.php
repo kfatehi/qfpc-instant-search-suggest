@@ -205,8 +205,23 @@ function iss_suggest() {
 				);
 			}
 
+      array_push($results, array(
+        'title' => "Ask about " . $s,
+        'permalink' => site_url() . "/ask-question",
+        'count'	=> $count,
+        'type' => 'more'
+      ));
+
 			echo json_encode( $results );
-		}
+    } else {
+      $results[] = array(
+        'title' => "Ask about " . $s,
+        'permalink' => site_url() . "/ask-question",
+        'count'	=> $count,
+        'type' => 'more'
+      );
+			echo json_encode( $results );
+    }
 	}
 
 	die();
