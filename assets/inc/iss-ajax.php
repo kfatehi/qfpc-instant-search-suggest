@@ -207,7 +207,7 @@ function iss_suggest() {
 
       array_push($results, array(
         'title' => "Ask about " . $s,
-        'permalink' => site_url() . "/ask-question",
+        'permalink' => site_url() . "/ask-question?s=" . $s,
         'count'	=> $count,
         'type' => 'more'
       ));
@@ -216,7 +216,7 @@ function iss_suggest() {
     } else {
       $results[] = array(
         'title' => "Ask about " . $s,
-        'permalink' => site_url() . "/ask-question",
+        'permalink' => site_url() . "/ask-question?s=" . $s,
         'count'	=> $count,
         'type' => 'more'
       );
